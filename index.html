@@ -19,8 +19,82 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
+        <h1>CSS Grid samples</h1>
+        <h2>1. Grid showing displaced primary content based on <code>grid-column</code> and <code>grid-row</code></h2>
+        <p>
+            This CSS grid uses a grid with columns specified by width: <code>grid-template-columns: 100px 150px auto 150px 100px;</code>. 
+            The container element has an 8px padding and we're using the native <code>grid-gap</code> property to specify an 8px gap between
+            grid elements.  This layout breaks pretty badly at mobile res.
+        </p>
+        <div class="container container--1">
+            <div class="item item--primary">Primary Content</div>
+            <div class="item">Content 1</div>
+            <div class="item">Content 2</div>
+            <div class="item">Content 3</div>
+            <div class="item">Content 4</div>
+            <div class="item">Content 5</div>
+            <div class="item">Content 6</div>
+            <div class="item">Content 7</div>
+            <div class="item">Content 8</div>
+            <div class="item">Content 9</div>
+            <div class="item">Content 10</div>
+            <div class="item">Content 11</div>
+            <div class="item">Content 12</div>
+            <div class="item">Content 13</div>
+            <div class="item">Content 14</div>
+        </div>
+
+
+        <h2>2. Repeating example 1 with a different grid layout</h2>
+        <p>
+            This CSS grid uses exactly the same markup (besides one modifier class) with columns specified by width: 
+            <code>grid-template-columns: 100px auto 100px;</code>.
+        </p>
+        <div class="container container--2">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+                <div class="item">Content 5</div>
+                <div class="item">Content 6</div>
+                <div class="item">Content 7</div>
+                <div class="item">Content 8</div>
+                <div class="item">Content 9</div>
+                <div class="item">Content 10</div>
+                <div class="item">Content 11</div>
+                <div class="item">Content 12</div>
+                <div class="item">Content 13</div>
+                <div class="item">Content 14</div>
+        </div>
+
+
+        <h2>3. Sample 1 with responsive layout</h2>
+        <p>
+            This CSS grid uses exactly the same markup (besides one modifier class) as example 1. The css adds responsive 
+            layout and stacks the items on mobile screens (only one breakpoint @ 800px). The primary content changes locations 
+            between breakpoints.
+        </p>
+        <div class="container container--3">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+                <div class="item">Content 5</div>
+                <div class="item">Content 6</div>
+                <div class="item">Content 7</div>
+                <div class="item">Content 8</div>
+                <div class="item">Content 9</div>
+                <div class="item">Content 10</div>
+                <div class="item">Content 11</div>
+                <div class="item">Content 12</div>
+                <div class="item">Content 13</div>
+                <div class="item">Content 14</div>
+        </div>
+
+
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>

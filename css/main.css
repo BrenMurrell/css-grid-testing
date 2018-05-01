@@ -96,10 +96,57 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+    padding: 16px;
+}
 
+/* grid container */
+code {
+    background: #e3e3e3;
+    padding: 2px 4px;
+}
 
+.container {
+    display: grid;
+    background: grey;
+    grid-gap: 8px;
+    padding: 8px;
+}
 
+.item {
+    background: white;
+    text-align: center;
+}
+.item--primary {
+    background-color: yellow;
+}
 
+.container--1 {
+    grid-template-columns: 100px 150px auto 150px 100px;    
+}
+
+.container--1 .item--primary {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.container--2 {
+    grid-template-columns: 100px auto 100px;           
+}
+.container--2 .item--primary {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+@media all and (min-width: 800px) {
+    .container--3 {
+        grid-template-columns: 100px 150px auto 150px 100px;            
+    }
+    .container--3 .item--primary {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+}
 
 
 
