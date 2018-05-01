@@ -13,6 +13,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -43,7 +45,17 @@
             <div class="item">Content 13</div>
             <div class="item">Content 14</div>
         </div>
+<pre><code class="css">
+    .container--1 {
+        grid-template-columns: 100px 150px auto 150px 100px;    
+    }
 
+    .container--1 .item--primary {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+</code></pre>
 
         <h2>2. Repeating example 1 with a different grid layout</h2>
         <p>
@@ -67,7 +79,16 @@
                 <div class="item">Content 13</div>
                 <div class="item">Content 14</div>
         </div>
+<pre><code class="css">
+    .container--2 {
+        grid-template-columns: 100px auto 100px;           
+    }
+    .container--2 .item--primary {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
 
+</code></pre>
 
         <h2>3. Sample 1 with responsive layout</h2>
         <p>
@@ -92,7 +113,18 @@
                 <div class="item">Content 13</div>
                 <div class="item">Content 14</div>
         </div>
-
+<pre><code class="css">
+    @media all and (min-width: 800px) {
+        .container--3 {
+            grid-template-columns: 100px 150px auto 150px 100px;            
+        }
+        .container--3 .item--primary {
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+    }
+    
+</code></pre>
 
         <!-- Add your site or application content here -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -100,7 +132,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         
         
     </body>
