@@ -20,8 +20,52 @@
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
+    <div class="page">
         <h1>CSS Grid samples</h1>
+
+        The following examples are put together using the following basic HTML markup:
+
+<pre><code class="html">
+    &lt;div class="container container--0"&gt;
+            &lt;div class="item item--primary"&gt;Primary Content&lt;/div&gt;
+            &lt;div class="item"&gt;Content 1&lt;/div&gt;
+            &lt;div class="item"&gt;Content 2&lt;/div&gt;
+            &lt;div class="item"&gt;Content 3&lt;/div&gt;
+            &lt;div class="item"&gt;Content 4&lt;/div&gt;
+            &lt;div class="item"&gt;Content 5&lt;/div&gt;
+            &lt;div class="item"&gt;Content 6&lt;/div&gt;
+            &lt;div class="item"&gt;Content 7&lt;/div&gt;
+            &lt;div class="item"&gt;Content 8&lt;/div&gt;
+            &lt;div class="item"&gt;Content 9&lt;/div&gt;
+            &lt;div class="item"&gt;Content 10&lt;/div&gt;
+            &lt;div class="item"&gt;Content 11&lt;/div&gt;
+            &lt;div class="item"&gt;Content 12&lt;/div&gt;
+            &lt;div class="item"&gt;Content 13&lt;/div&gt;
+            &lt;div class="item"&gt;Content 14&lt;/div&gt;
+    &lt;/div&gt;
+
+    
+
+</code></pre>
+        <div class="container container--0">
+            <div class="item item--primary">Primary Content</div>
+            <div class="item">Content 1</div>
+            <div class="item">Content 2</div>
+            <div class="item">Content 3</div>
+            <div class="item">Content 4</div>
+            <div class="item">Content 5</div>
+            <div class="item">Content 6</div>
+            <div class="item">Content 7</div>
+            <div class="item">Content 8</div>
+            <div class="item">Content 9</div>
+            <div class="item">Content 10</div>
+            <div class="item">Content 11</div>
+            <div class="item">Content 12</div>
+            <div class="item">Content 13</div>
+            <div class="item">Content 14</div>
+        </div>
+    </div>
+    <div class="page">
         <h2>1. Grid showing displaced primary content based on <code>grid-column</code> and <code>grid-row</code></h2>
         <p>
             This CSS grid uses a grid with columns specified by width: <code>grid-template-columns: 100px 150px auto 150px 100px;</code>. 
@@ -56,6 +100,8 @@
     }
 
 </code></pre>
+    </div>
+    <div class="page">
 
         <h2>2. Repeating example 1 with a different grid layout</h2>
         <p>
@@ -89,6 +135,8 @@
     }
 
 </code></pre>
+    </div>
+    <div class="page">
 
         <h2>3. Sample 1 with responsive layout</h2>
         <p>
@@ -125,6 +173,153 @@
     }
     
 </code></pre>
+    </div>
+    <div class="page">
+
+        <h2>4. Multiple columns / rows </h2>
+        <div class="container container--4">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item item--secondary">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+                <div class="item">Content 5</div>
+                <div class="item">Content 6</div>
+                <div class="item">Content 7</div>
+                <div class="item">Content 8</div>
+                <div class="item">Content 9</div>
+                <div class="item">Content 10</div>
+                <div class="item">Content 11</div>
+                <div class="item">Content 12</div>
+                <div class="item">Content 13</div>
+                <div class="item">Content 14</div>
+        </div>
+<pre><code class="css">
+    .container--4 {
+        grid-template-columns: auto auto auto;               
+    }
+    
+    .container--4 .item--primary {
+        grid-column: 2/4;
+        grid-row: 2/7;
+    }
+    
+</code></pre>
+    </div>
+    <div class="page">
+
+        <h2>5. A new layout</h2>
+        <div class="container container--5">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item item--secondary">Secondary Content</div>
+                <div class="item item--tertiary">Tertiary Content</div>
+                <div class="item item--quaternary">Quaternary Content</div>
+                <div class="item">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+        </div>
+
+
+<pre><code class="css">
+    .container--5 {
+        grid-template-columns: auto auto auto auto;
+    }
+</code></pre>
+    </div>
+
+
+
+
+    <div class="page">
+
+        <h2>6. Named spaces</h2>
+        <div class="container container--6">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item item--secondary">Secondary Content</div>
+                <div class="item item--tertiary">Tertiary Content</div>
+                <div class="item item--quaternary">Quaternary Content</div>
+                <div class="item">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+        </div>
+
+
+<pre><code class="css">
+    .container--6 {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "header header header header"
+          "main main . sidebar"
+          "main main . sidebar"      
+          "main main . sidebar"      
+          "main main . sidebar"
+          "footer footer footer footer";
+      }
+    
+      .container--6 .item--primary {
+          grid-area: header;
+      }
+      .container--6 .item--secondary {
+          grid-area: main;
+      }
+      .container--6 .item--tertiary {
+        grid-area: sidebar;
+      }
+      .container--6 .item--quaternary {
+        grid-area: footer;
+      }
+    
+</code></pre> 
+    </div>
+
+
+
+    <div class="page">
+
+        <h2>7. Juggling Named spaces</h2>
+        <div class="container container--7">
+                <div class="item item--primary">Primary Content</div>
+                <div class="item item--secondary">Secondary Content</div>
+                <div class="item item--tertiary">Tertiary Content</div>
+                <div class="item item--quaternary">Quaternary Content</div>
+                <div class="item">Content 1</div>
+                <div class="item">Content 2</div>
+                <div class="item">Content 3</div>
+                <div class="item">Content 4</div>
+        </div>
+
+
+<pre><code class="css">
+    .container--7 {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "header header header header"
+          "main main . sidebar"
+          "main main . sidebar"      
+          "main main . sidebar"      
+          "main main . sidebar"
+          "footer footer footer footer";
+      }
+    
+      .container--7 .item--primary {
+          grid-area: main;
+        }
+        .container--7 .item--secondary {
+            grid-area: sidebar;
+        }
+        .container--7 .item--tertiary {
+            grid-area: footer;
+        }
+        .container--7 .item--quaternary {
+            grid-area: header;
+      }
+    
+</code></pre> 
+    </div>
 
         <!-- Add your site or application content here -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
